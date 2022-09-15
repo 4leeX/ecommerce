@@ -28,12 +28,12 @@ export default {
     padding-top: 30px;
 
     .firtContainer{
-      justify-content: center;
+      /* justify-content: center; */
 
       .searchContent{
-      
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         input{
           border-radius: 50px 0 0 50px;

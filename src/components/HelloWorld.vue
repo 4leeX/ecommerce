@@ -10,7 +10,7 @@
         <img :src="p.image" alt="image">
       </div>
       <div class="cardContent">
-        <p>{{p.title}}</p>
+        <p>{{p.name}}</p>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ export default {
       products.then(data => {
         this.products = data.data.results;
         
-        console.log(data.data.results);
+        // console.log(data.data.results);
       })
     }
   }
@@ -48,6 +48,7 @@ export default {
 <style lang="scss" scoped>
 .homeContainer{
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 30px;
