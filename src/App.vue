@@ -1,12 +1,14 @@
 <script setup>
   import HelloWorld from './components/HelloWorld.vue'
   import Navbar from './components/Navbar.vue'
+  import Footer from './components/Footer.vue'
 </script>
 
 <template>
   <div>
     <Navbar />
     <HelloWorld msg="Vite + Vue" />
+    <Footer />
   </div>
 </template>
 
