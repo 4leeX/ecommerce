@@ -1,9 +1,23 @@
 <template>
   <div class="homeContainer">
 
-    <MenuCategorias />
+  <MenuCategorias />
 
-  <div class="cardContainerProvisory">
+  <div class="cardContainerProvisory" 
+    v-if="products.length!=undefined">
+    <div  v-for="i in 12" :key="i"
+      class="cardContainer">
+      <div class="cardImg fbloading"></div>
+      <div class="cardContent">
+        <p class="fbloading" style="display:inline-block;width:auto;">ppppppppppppppppppppppp</p><br><br>
+        <p class="fbloading" style="display:inline-block;width:auto;">aaaaaaaaaaaaaaaaaaaa</p><br>
+        <p class="fbloading" style="display:inline-block;width:auto;">ppppppppppppppppp</p><br>
+        <p class="fbloading" style="display:inline-block;width:auto;">ppppppppppppppppp</p><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardContainerProvisory" v-else>
     <div v-for="(p, i) in products" :key="i"
       class="cardContainer">
       <div class="cardImg">
@@ -95,5 +109,30 @@ export default {
       }
     }
   }
+}
+
+.fbloading{
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: wave;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-duration: 1s;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: wave;
+  -moz-animation-timing-function: linear;
+  background: #dddddd;background-image: -webkit-gradient(linear,  left center,  right center,  from(#dddddd),  color-stop(.2,  #f5f5f5),  color-stop(.4,  #e5e5e5),  to(#dddddd));background-image: -webkit-linear-gradient(left,  #dddddd 0%,  #f5f5f5 20%,  #e5e5e5 40%,  #dddddd 100%);
+  background-image: -moz-gradient(linear,  left center,  right center,  from(#dddddd),  color-stop(.2,  #f5f5f5),  color-stop(.4,  #e5e5e5),  to(#dddddd));background-image: -moz-linear-gradient(left,  #dddddd 0%,  #f5f5f5 20%, #e5e5e5 40%, #dddddd 100%);background-repeat: repeat-y;
+  background-size: 1200px 104px;
+  height: auto;
+  position: relative;
+  color:transparent;
+	user-select: none;
 }
 </style>
