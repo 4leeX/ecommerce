@@ -5,7 +5,7 @@
   <SecaoMedia />
 
   <div class="cardContainerProvisory" 
-    v-if="typeof products==undefined">
+    v-if="typeof products=='undefined'">
     <!-- v-if="typeof products==undefined || products.length==0"> -->
     <div  v-for="i in 12" :key="i"
       class="cardContainer">
