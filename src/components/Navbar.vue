@@ -24,10 +24,7 @@ export default {
       open: false,
     }
   },
-  mounted(){
-    console.log(this.$store, 'store');
-    console.log(this.$store.state.carrinho.open, 'carrinho open');
-  },
+  mounted(){},
   methods: {
     openCart(){
       this.$store.commit("toggleOpenCart", true);

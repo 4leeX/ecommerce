@@ -55,7 +55,7 @@ export default {
       Products.then(data => {
         this.products = data.data.results;
         
-        console.log(data.data);
+        // console.log(data.data);
       })
     }
   }
