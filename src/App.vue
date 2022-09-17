@@ -7,9 +7,9 @@
 
 <template>
   <div>
-    <!-- <transition name="bounce"> -->
-      <Carrinho  v-if="this.$store.state.carrinho.open" />
-    <!-- </transition> -->
+    <transition name="fade">
+      <Carrinho v-show="this.$store.state.carrinho.open" />
+    </transition>
     <Navbar />
     <HelloWorld msg="Vite + Vue" />
     <Footer />
@@ -17,5 +17,10 @@
 </template>
 
 <style lang="scss" scoped>
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .6s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}
 </style>

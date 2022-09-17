@@ -6,10 +6,9 @@
         <button>
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <button class="cartNavbar" @mouseenter="openCart" @mouseleave="closeCart">
+        <button class="cartNavbar" @mouseenter="openCart">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
-        {{ $store.state.products }}
       </div>
     </div>
     <nav class="secondContainer">
