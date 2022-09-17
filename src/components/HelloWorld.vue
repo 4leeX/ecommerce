@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import Products from '../service/Products.js';
+import Products from '../service/Products';
 import MenuCategorias from '../components/MenuCategorias.vue';
 import SecaoMedia from '../components/SecaoMedia.vue';
 
