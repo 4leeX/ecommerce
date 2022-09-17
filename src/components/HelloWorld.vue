@@ -2,17 +2,18 @@
   <div class="homeContainer">
 
   <MenuCategorias />
+  <SecaoMedia />
 
   <div class="cardContainerProvisory" 
-    v-if="products.length!=undefined">
+    v-if="typeof products==undefined || products.length==0">
     <div  v-for="i in 12" :key="i"
       class="cardContainer">
-      <div class="cardImg fbloading"></div>
-      <div class="cardContent">
-        <p class="fbloading" style="display:inline-block;width:auto;">ppppppppppppppppppppppp</p><br><br>
-        <p class="fbloading" style="display:inline-block;width:auto;">aaaaaaaaaaaaaaaaaaaa</p><br>
-        <p class="fbloading" style="display:inline-block;width:auto;">ppppppppppppppppp</p><br>
-        <p class="fbloading" style="display:inline-block;width:auto;">ppppppppppppppppp</p><br>
+      <div class="cardImg card__header header__img skeleton"></div>
+      <div class="cardContent card__body">
+        <p class="skeleton skeleton-text" style="display:inline-block;width:auto;">ppppppppppppppppppppppppppppppp</p><br><br>
+        <p class="skeleton skeleton-text" style="display:inline-block;width:auto;">aaaaaaaaaaaaaaaaaaaaaaaaa</p><br>
+        <p class="skeleton skeleton-text" style="display:inline-block;width:auto;">pppppppppppppppppppp</p><br>
+        <p class="skeleton skeleton-text" style="display:inline-block;width:auto;">pppppppppppppppppppp</p><br>
       </div>
     </div>
   </div>
@@ -34,6 +35,7 @@
 <script>
 import products from '../service/products';
 import MenuCategorias from '../components/MenuCategorias.vue';
+import SecaoMedia from '../components/SecaoMedia.vue';
 
 export default {
   data(){
@@ -42,7 +44,8 @@ export default {
     }
   },
   components:{
-    MenuCategorias
+    MenuCategorias,
+    SecaoMedia
   },
   mounted(){
     this.getProducts();
@@ -111,28 +114,34 @@ export default {
   }
 }
 
-.fbloading{
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: wave;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-duration: 1s;
-  -moz-animation-fill-mode: forwards;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-name: wave;
-  -moz-animation-timing-function: linear;
-  background: #dddddd;background-image: -webkit-gradient(linear,  left center,  right center,  from(#dddddd),  color-stop(.2,  #f5f5f5),  color-stop(.4,  #e5e5e5),  to(#dddddd));background-image: -webkit-linear-gradient(left,  #dddddd 0%,  #f5f5f5 20%,  #e5e5e5 40%,  #dddddd 100%);
-  background-image: -moz-gradient(linear,  left center,  right center,  from(#dddddd),  color-stop(.2,  #f5f5f5),  color-stop(.4,  #e5e5e5),  to(#dddddd));background-image: -moz-linear-gradient(left,  #dddddd 0%,  #f5f5f5 20%, #e5e5e5 40%, #dddddd 100%);background-repeat: repeat-y;
-  background-size: 1200px 104px;
-  height: auto;
-  position: relative;
-  color:transparent;
-	user-select: none;
+// loading animation
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
 }
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 1rem;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+
+.skeleton-text__body {
+  width: 75%;
+}
+
+.skeleton-footer {
+  width: 30%;
+}
+
 </style>
