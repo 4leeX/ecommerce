@@ -12,7 +12,7 @@
         <div class="card-body">
           <div class="no-products">
             <h2>SEM PRODUTOS</h2>
-            <img src="image/icons/no-cart.svg" alt="cart">
+            <img src="/image/icons/no-cart.svg" alt="cart">
           </div>
         </div>
         <div class="card-footer">
