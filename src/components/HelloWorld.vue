@@ -38,7 +38,7 @@ export default {
       products.then(data => {
         this.products = data.data.results;
         
-        // console.log(data.data.results);
+        console.log(data.data);
       })
     }
   }
@@ -76,7 +76,8 @@ export default {
           display: block;
           margin-left: auto;
           margin-right: auto;
-          min-width: 100px;
+          /* min-width: 100px; */
+          max-width: 200px;
           height: 100%;
         }
       }

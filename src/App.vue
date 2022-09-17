@@ -2,10 +2,14 @@
   import HelloWorld from './components/HelloWorld.vue'
   import Navbar from './components/Navbar.vue'
   import Footer from './components/Footer.vue'
+  import Carrinho from './components/Carrinho.vue'
 </script>
 
 <template>
   <div>
+    <!-- <transition name="bounce"> -->
+      <Carrinho  v-if="this.$store.state.carrinho.open" />
+    <!-- </transition> -->
     <Navbar />
     <HelloWorld msg="Vite + Vue" />
     <Footer />
@@ -13,15 +17,5 @@
 </template>
 
 <style lang="scss" scoped>
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-} */
+
 </style>

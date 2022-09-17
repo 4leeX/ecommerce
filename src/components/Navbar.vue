@@ -6,6 +6,10 @@
         <button>
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
+        <button class="cartNavbar" @mouseenter="openCart" @mouseleave="closeCart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        {{ $store.state.products }}
       </div>
     </div>
     <nav class="secondContainer">
@@ -16,7 +20,20 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      open: false,
+    }
+  },
+  mounted(){},
+  methods: {
+    openCart(){
+      this.$store.commit("toggleOpenCart", true);
+    },
+    closeCart(){
+      this.$store.commit("toggleOpenCart", false);
+    }
+  }
 }
 </script>
 
@@ -59,6 +76,17 @@ export default {
             font-size: 25px;
             color: #FFF;
           }
+        }
+
+        .cartNavbar{
+          border-radius: 50px;
+          padding: 10px;
+          margin-left: 10px;
+          background: rgb(68, 68, 68);
+
+            i{
+              color: yellow;
+            }
         }
       }
     }
