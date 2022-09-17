@@ -8,7 +8,7 @@
 <template>
   <div>
     <transition name="fade">
-      <Carrinho v-show="this.$store.state.carrinho.open" />
+      <Carrinho />
     </transition>
     <Navbar />
     <HelloWorld msg="Vite + Vue" />
