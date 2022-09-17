@@ -1,6 +1,7 @@
 import { createStore } from 'vuex';
 
 export default createStore({
+    strict: true,
     state: {
         user: {
             first_name: 'Alex',
