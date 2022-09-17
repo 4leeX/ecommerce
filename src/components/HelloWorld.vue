@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import products from '../service/Products';
+import Products from '../service/Products.js';
 import MenuCategorias from '../components/MenuCategorias.vue';
 import SecaoMedia from '../components/SecaoMedia.vue';
 
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     getProducts(){
-      products.then(data => {
+      Products.then(data => {
         this.products = data.data.results;
         
         console.log(data.data);
