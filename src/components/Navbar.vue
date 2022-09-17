@@ -6,17 +6,33 @@
         <button>
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
+        <button class="cartNavbar" @mouseenter="openCart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
       </div>
     </div>
     <nav class="secondContainer">
-        <p>TESTEE</p>
+        
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-
+  data(){
+    return{
+      open: false,
+    }
+  },
+  mounted(){},
+  methods: {
+    openCart(){
+      this.$store.commit("toggleOpenCart", true);
+    },
+    closeCart(){
+      this.$store.commit("toggleOpenCart", false);
+    }
+  }
 }
 </script>
 
@@ -59,6 +75,17 @@ export default {
             font-size: 25px;
             color: #FFF;
           }
+        }
+
+        .cartNavbar{
+          border-radius: 50px;
+          padding: 10px;
+          margin-left: 10px;
+          background: rgb(68, 68, 68);
+
+            i{
+              color: yellow;
+            }
         }
       }
     }
