@@ -1,10 +1,12 @@
 <template>
   <section class="secaoMediaSection">
     <div class="secaoMediaContainer">
-        <CardMedio tipo="" texto="Paulinho maluco" link=""/>
-        <CardMedio tipo="" texto="Gurupi" link=""/>
-        <CardMedio tipo="" texto="Zazau pica de cachorro" link=""/>
-        <CardMedio tipo="" texto="Toperinha gameplaus" link=""/>
+        <CardMedio tipo="img" pathImg="/image/cardm/file.jpg" 
+          texto="Paulinho maluco" link=""/>
+        <CardMedio tipo="img" pathImg="/image/cardm/alexa.jpg" 
+          texto="Gurupi" link=""/>
+        <CardMedio tipo="card" texto="Zazau pica de cachorro" link=""/>
+        <CardMedio tipo="card" texto="Toperinha gameplaus" link=""/>
     </div>
   </section>
 </template>
