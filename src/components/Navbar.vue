@@ -12,7 +12,7 @@
       </div>
     </div>
     <nav class="secondContainer">
-        <p>TESTEE</p>
+        
     </nav>
   </header>
 </template>
