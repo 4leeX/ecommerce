@@ -39,7 +39,7 @@ export default {
 <style lang="scss">
 .navContainer{
     height: 80px;
-    background: rgb(129, 129, 129);
+    background: var(--bkg-secondary);
     padding: 0 30px;
     padding-top: 30px;
 
@@ -79,12 +79,12 @@ export default {
 
         .cartNavbar{
           border-radius: 50px;
-          padding: 10px;
+          padding: 10px 35px;
           margin-left: 10px;
-          background: rgb(68, 68, 68);
+          background: var(--color-one);
 
             i{
-              color: yellow;
+              color: #FFF;
             }
         }
       }

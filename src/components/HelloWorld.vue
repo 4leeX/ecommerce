@@ -71,6 +71,7 @@ export default {
   flex-wrap: wrap;
   padding: 30px;
   justify-content: center;
+  background: var(--bkg-primary);
     
   .cardContainerProvisory{
     display: flex;
@@ -102,7 +103,7 @@ export default {
       .cardContent{
         padding: 15px 5px 5px 5px;
         height: 150px;
-        background: grey;
+        background: var(--bkg-info-card);
         border-radius: 0 0 10px 10px;
         
         p{
