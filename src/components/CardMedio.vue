@@ -5,6 +5,11 @@
     <div class="img-card" :style="tipo=='card' ? 'display:none':''">
       <img :src="pathImg" alt="imagem">
     </div>
+    <div class="img-prod" :style="tipo=='img' ? 'display:none':''">
+        <!-- <div v-for="(p, i) in produto.slice(0, 4)" :key="i">
+           {{ p.image }} 
+        </div> -->
+    </div>
     <a href="#">Ver mais</a>
   </div>
 </template>
@@ -12,26 +17,24 @@
 <script>
 export default {
   data(){
-    return{
-      products: [],
-    }
+    return{}
   },
-  props: ['tipo', 'texto', 'pathImg'],
-  mounted(){},
+  props: ['tipo', 'texto', 'pathImg', 'produto'],
+  computed:{
+    // reduceArrayOfProducts(){
+      // reduceArray(){
+      //   setTimeout(() => {
+      //     return this.produto.slice(0, 4);
+      //     // console.log(this.produto);
+      //   }, 5000);
+      // }      
+    // }
+  },
   methods: {}
 }
 </script>
 
 <style lang="scss" scoped>
-    /* .img-card{
-      img{
-        max-height: 100%;
-        max-width: 100%;
-      }
-    }
-    .prod-card{ */
-
-    /* } */
     .cardMedioContainer{
         width: 25%;
         background: #FFF;
@@ -66,5 +69,9 @@ export default {
 
           }
         }
+
+        .prod-card{
+          display: flex;
+        } 
     }
 </style>

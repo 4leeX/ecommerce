@@ -2,7 +2,7 @@
   <div class="homeContainer">
 
   <MenuCategorias />
-  <SecaoMedia />
+  <SecaoMedia :produtos="products" />
 
   <div class="cardContainerProvisory" 
     v-if="typeof products=='undefined'">
@@ -27,6 +27,9 @@
       </div>
       <div class="cardContent">
         <p>{{p.name}}</p>
+        <!-- <p>{{p.stars}}</p> -->
+        <star-rating :rating="p.stars"></star-rating>
+        <p>{{p.price_string}}</p>
       </div>
     </div>
   </div>
@@ -35,8 +38,9 @@
 
 <script>
 import Products from '../service/Products';
-import MenuCategorias from '../components/MenuCategorias.vue';
-import SecaoMedia from '../components/SecaoMedia.vue';
+import MenuCategorias from './MenuCategorias.vue';
+import SecaoMedia from './SecaoMedia.vue';
+import StarRating from './star-rating.vue';
 
 export default {
   data(){
@@ -46,11 +50,13 @@ export default {
   },
   components:{
     MenuCategorias,
-    SecaoMedia
+    SecaoMedia,
+    StarRating
   },
   mounted(){
     this.getProducts();
   },
+  // computed: {},
   methods: {
     getProducts(){
       Products.then(data => {
@@ -58,7 +64,7 @@ export default {
         
         // console.log(data.data);
       })
-    }
+    },
   }
 }
 </script>
