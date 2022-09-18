@@ -2,6 +2,9 @@
   <header class="navContainer">
     <div class="firtContainer">
       <div class="searchContent">
+        <button class="menuNavbar" @click="openMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
         <input type="text" value="">
         <button>
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -24,13 +27,24 @@ export default {
       open: false,
     }
   },
-  mounted(){},
+  mounted(){
+    console.log(this.$store.state.menu.open);
+  },
   methods: {
     openCart(){
       this.$store.commit("toggleOpenCart", true);
     },
     closeCart(){
       this.$store.commit("toggleOpenCart", false);
+    },
+    openMenu(){
+      this.$store.commit("toggleOpenMenu", true);
+      console.log('aberto');
+      console.log(this.$store.state.menu.open);
+    },
+    closeMenu(){
+      this.$store.commit("toggleOpenMenu", false);
+      console.log('fechado');
     }
   }
 }
@@ -77,7 +91,7 @@ export default {
           }
         }
 
-        .cartNavbar{
+        .cartNavbar, .menuNavbar{
           border-radius: 50px;
           padding: 10px 35px;
           margin-left: 10px;
@@ -86,6 +100,9 @@ export default {
             i{
               color: #FFF;
             }
+        }
+        .menuNavbar{
+          margin-right: 10px;
         }
       }
     }

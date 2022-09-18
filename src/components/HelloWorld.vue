@@ -27,7 +27,6 @@
       </div>
       <div class="cardContent">
         <p>{{p.name}}</p>
-        <!-- <p>{{p.stars}}</p> -->
         <star-rating :rating="p.stars"></star-rating>
         <p>{{p.price_string}}</p>
       </div>

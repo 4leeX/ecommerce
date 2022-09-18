@@ -2,11 +2,11 @@
   <section class="secaoMediaSection">
     <div class="secaoMediaContainer">
         <CardMedio tipo="img" pathImg="/image/cardm/file.jpg" 
-          texto="Paulinho maluco" link=""/>
+          texto="Bla bla bla" link=""/>
         <CardMedio tipo="img" pathImg="/image/cardm/alexa.jpg" 
-          texto="Gurupi" link=""/>
-        <CardMedio tipo="card" texto="Zazau pica de cachorro" link="" :produto="produtos"/>
-        <CardMedio tipo="card" texto="Toperinha gameplaus" link="" :produto="produtos"/>
+          texto="Bla bla bla" link=""/>
+        <CardMedio tipo="card" texto="Testando" link="" :produto="produtos"/>
+        <CardMedio tipo="card" texto="Teste" link="" :produto="produtos"/>
     </div>
   </section>
 </template>
