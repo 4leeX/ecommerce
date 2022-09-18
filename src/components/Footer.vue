@@ -44,13 +44,19 @@ export default {
         padding: 30px;
         padding-left: 50px;
         padding-right: 50px;
-        background: #FFF;
+        background: var(--bkg-secondary);
 
         .sectionContainer{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-
+             
+            span{
+            color: #FFF;
+            }
+            p{
+                color: #FFF;
+            }
             .textContent{
                 
             }

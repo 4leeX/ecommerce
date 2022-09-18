@@ -2,7 +2,7 @@
   <div class="homeContainer">
 
   <MenuCategorias />
-  <SecaoMedia />
+  <SecaoMedia :produtos="products" />
 
   <div class="cardContainerProvisory" 
     v-if="typeof products=='undefined'">
@@ -27,6 +27,8 @@
       </div>
       <div class="cardContent">
         <p>{{p.name}}</p>
+        <star-rating :rating="p.stars"></star-rating>
+        <p>{{p.price_string}}</p>
       </div>
     </div>
   </div>
@@ -35,8 +37,9 @@
 
 <script>
 import Products from '../service/Products';
-import MenuCategorias from '../components/MenuCategorias.vue';
-import SecaoMedia from '../components/SecaoMedia.vue';
+import MenuCategorias from './MenuCategorias.vue';
+import SecaoMedia from './SecaoMedia.vue';
+import StarRating from './star-rating.vue';
 
 export default {
   data(){
@@ -46,11 +49,13 @@ export default {
   },
   components:{
     MenuCategorias,
-    SecaoMedia
+    SecaoMedia,
+    StarRating
   },
   mounted(){
     this.getProducts();
   },
+  // computed: {},
   methods: {
     getProducts(){
       Products.then(data => {
@@ -58,7 +63,7 @@ export default {
         
         // console.log(data.data)
       })
-    }
+    },
   }
 }
 </script>
@@ -71,6 +76,7 @@ export default {
   flex-wrap: wrap;
   padding: 30px;
   justify-content: center;
+  background: var(--bkg-primary);
     
   .cardContainerProvisory{
     display: flex;
@@ -102,7 +108,7 @@ export default {
       .cardContent{
         padding: 15px 5px 5px 5px;
         height: 150px;
-        background: grey;
+        background: var(--bkg-info-card);
         border-radius: 0 0 10px 10px;
         
         p{

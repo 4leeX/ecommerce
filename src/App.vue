@@ -3,12 +3,16 @@
   import Navbar from './components/Navbar.vue'
   import Footer from './components/Footer.vue'
   import Carrinho from './components/Carrinho.vue'
+  import MenuLateral from './components/MenuLateral.vue'
 </script>
 
 <template>
   <div>
     <transition name="fade">
       <Carrinho />
+    </transition>
+    <transition name="fade">
+      <MenuLateral />
     </transition>
     <Navbar />
     <HelloWorld msg="Vite + Vue" />

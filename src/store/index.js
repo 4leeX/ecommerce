@@ -11,22 +11,16 @@ export default createStore({
         carrinho: {
             open: false
         },
-        products: [
-            {
-                id: 1,
-                name: 'Bola',
-                price: 100
-            },
-            {
-                id: 2,
-                name: 'Coca-Cola',
-                price: 7
-            },
-        ]
+        menu: {
+            open: false
+        }
     },
     mutations: {
         toggleOpenCart(state, value){
             state.carrinho.open = value;
+        },
+        toggleOpenMenu(state, value){
+            state.menu.open = value;
         }
     },
 })
