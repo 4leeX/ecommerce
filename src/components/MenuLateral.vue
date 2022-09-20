@@ -34,6 +34,19 @@
             <p>lalalal</p>
             <p>lalalal</p>
           </div>
+          <div class="categoryContainer">
+            <h3>Categoria 4</h3>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+          </div>
+          <div class="categoryContainer">
+            <h3>Configuracoes</h3>
+            <p>Sua Conta</p>
+            <p>Sair</p>
+          </div>
         </div>
         <div class="card-footer">
           <p>dsa</p>
@@ -103,13 +116,17 @@ export default {
       }
     }
     .card-body{
-      height: 100vh;
       width: 100%;
       padding:20px 0;
+      margin:4px, 4px;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
       
       .categoryContainer{
         width: 100%;
-        max-height: 33%;
+        /* min-height: 10px; */
+        height: 200px;
         padding-bottom: 10px;
         padding-top: 10px;
         border-bottom: 1px solid rgb(175, 175, 175);
