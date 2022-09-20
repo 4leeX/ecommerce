@@ -10,13 +10,46 @@
           </div>
         </div>
         <div class="card-body">
-          <div class="no-products">
-            <h2>SEM PRODUTOS</h2>
-            <img src="/image/icons/no-cart.svg" alt="cart">
+          <div class="categoryContainer">
+            <h3>Categoria 1</h3>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+          </div>
+          <div class="categoryContainer">
+            <h3>Categoria 2</h3>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+          </div>
+          <div class="categoryContainer">
+            <h3>Categoria 3</h3>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+          </div>
+          <div class="categoryContainer">
+            <h3>Categoria 4</h3>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+            <p>lalalal</p>
+          </div>
+          <div class="categoryContainer">
+            <h3>Configuracoes</h3>
+            <p>Sua Conta</p>
+            <p>Sair</p>
           </div>
         </div>
         <div class="card-footer">
-
+          <p>dsa</p>
         </div>
     </header>
   </section>
@@ -83,21 +116,39 @@ export default {
       }
     }
     .card-body{
-      height: 100vh;
       width: 100%;
+      padding:20px 0;
+      margin:4px, 4px;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      
+      .categoryContainer{
+        width: 100%;
+        /* min-height: 10px; */
+        height: 200px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid rgb(175, 175, 175);
 
-      .no-products{
-        padding: 100px;
-        h2{
-          color: #FFF;
+        h3{
+          padding-left: 25px;
+          padding-bottom: 10px;
+        }
+        p{
+          line-height: 35px;
+          padding-left: 25px;
+          &:hover{
+            background: rgb(194, 194, 194)
+          }
         }
       }
     }
 
     /* .card-footer{
-      height: 120px;
+      height: 320px;
       width: 100%;
-      background: grey;
+      background: rgb(75, 75, 75);
       bottom: 0;
       border-radius: 0 0 0 10px;
     } */

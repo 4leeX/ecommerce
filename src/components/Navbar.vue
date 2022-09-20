@@ -39,12 +39,10 @@ export default {
     },
     openMenu(){
       this.$store.commit("toggleOpenMenu", true);
-      console.log('aberto');
-      console.log(this.$store.state.menu.open);
+      this.closeCart();
     },
     closeMenu(){
       this.$store.commit("toggleOpenMenu", false);
-      console.log('fechado');
     }
   }
 }
